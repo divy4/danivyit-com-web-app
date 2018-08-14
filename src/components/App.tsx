@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
-import { inherits } from 'util';
 
 interface IAppProps {
 }
