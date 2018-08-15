@@ -1,15 +1,37 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as React from 'react';
+import Header from './Header';
 
 interface IAppProps {
 }
 
-export default class App extends React.Component<IAppProps> {
+interface IAppState {
+  currentTab: string;
+  tabs: string[];
+}
+
+export default class App extends React.Component<IAppProps, IAppState> {
+  constructor(props: IAppProps) {
+    super(props)
+    this.state = {
+      currentTab: "Home",
+      tabs: ["Home", "About", "Experience", "School", "Work", "Contact"],
+    }
+  }
+
+  handleTabChange = (tab: string): void => {
+    this.setState({
+      ...this.state,
+      currentTab: tab,
+    })
+  }
+
   render() {
+    const { currentTab, tabs } = this.state;
     return (
-      <h1>
-        Hello!
-      </h1>
+      <div>
+        <Header tabNames={tabs} onSelect={this.handleTabChange} selectedTab={currentTab}/>
+      </div>
     )
   }
 }
