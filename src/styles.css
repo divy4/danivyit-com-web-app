@@ -1,0 +1,10 @@
+.profile-image {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1080px;
+}
+
+.profile-image-container {
+    background: black;
+    text-align: center;
+}
