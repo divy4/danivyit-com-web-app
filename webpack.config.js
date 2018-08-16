@@ -1,4 +1,6 @@
 const path = require('path');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: './src/index.tsx',
     output: {
@@ -27,14 +29,6 @@ module.exports = {
                 ],
             },
             {
-                test: /\.png$/,
-                use: "url-loader?limit=100000"
-            },
-            {
-                test: /\.jpg$/,
-                use: "file-loader"
-            },
-            {
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
                 use: 'url-loader? limit=10000&mimetype=application/font-woff'
             },
@@ -59,4 +53,15 @@ module.exports = {
             },
         ]
     },
+    plugins: [
+        new CopyWebpackPlugin([
+            {
+                from:'src/resources',
+                to:'resources'
+            }, 
+        ]),
+        new HtmlWebpackPlugin({
+            template: 'src/index.html',
+        }),
+    ],
 };
