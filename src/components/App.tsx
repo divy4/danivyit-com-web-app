@@ -1,6 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header from './Header';
 import Body from './Body';
+import Footer from './Footer';
+import Header from './Header';
 import * as React from 'react';
 
 interface IAppProps {
@@ -33,6 +34,7 @@ export default class App extends React.Component<IAppProps, IAppState> {
       <div>
         <Header tabNames={tabs} onSelect={this.handleTabChange} selectedTab={currentTab}/>
         <Body tabName={currentTab}/>
+        <Footer/>
       </div>
     )
   }
