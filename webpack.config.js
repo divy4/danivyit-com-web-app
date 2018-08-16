@@ -18,12 +18,30 @@ module.exports = {
             },
             {
                 test: /\.css$/,
+                exclude: path.resolve(__dirname, "src"),
                 use: [
                     {
                         loader: 'style-loader',
                     },
                     {
                         loader: 'css-loader',
+                    },
+                ],
+            },
+            {
+                test: /\.css$/,
+                exclude: path.resolve(__dirname, "node_modules"),
+                use: [
+                    {
+                        loader: 'style-loader',
+                    },
+                    {
+                        loader: 'typings-for-css-modules-loader',
+                        options: {
+                            camelCase: true,
+                            modules: true,
+                            namedExport: true,
+                        },
                     },
                 ],
             },
