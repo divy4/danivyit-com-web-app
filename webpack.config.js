@@ -47,34 +47,49 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
-                loader: "file-loader",
+                test: /\.(jpe?g|gif|png)$/,
+                loader: "url-loader",
+                options: {
+                    fallback: 'file-loader',
+                    limit: 10000,
+                    outputPath: 'images/',
+                },
+            },
+            {
+                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+                loader: 'url-loader',
+                options: {
+                    fallback: 'file-loader',
+                    limit: 10000,
+                    mimetype: 'image/svg+xml',
+                    outputPath: 'images',
+                },
             },
             {
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url-loader',
                 options: {
+                    fallback: 'file-loader',
                     limit: 10000,
                     mimetype: 'application/font-woff',
+                    outputPath: 'fonts/',
                 },
             },
             {
                 test: /\.ttf$/,
                 loader: 'ttf-loader',
                 options: {
-                    name: './font/[hash].[ext]',
+                    name: './fonts/[hash].[ext]',
                 },
             },
             {
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                loader: 'file-loader',
-            },
-            {
-                test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'url-loader',
                 options: {
+                    fallback: 'file-loader',
                     limit: 10000,
-                    mimetype: 'image/svg+xml',
+                    mimetype: 'application/vnd.ms-fontobject',
+                    outputPath: 'fonts/',
                 },
             },
         ],
