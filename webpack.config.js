@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: './src/index.tsx',
@@ -75,6 +76,12 @@ module.exports = {
         ]
     },
     plugins: [
+        new CopyWebpackPlugin([
+            {
+                from: 'src/resources',
+                to: 'resources',
+            }
+        ]),
         new HtmlWebpackPlugin({
             template: 'src/index.html',
         }),
