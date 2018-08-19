@@ -15,7 +15,7 @@ module.exports = {
         rules: [
             {
                 test: /\.(ts|tsx)$/,
-                loader: "awesome-typescript-loader"
+                loader: "awesome-typescript-loader",
             },
             {
                 test: /\.css$/,
@@ -48,32 +48,36 @@ module.exports = {
             },
             {
                 test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
-                loader: "file-loader"
+                loader: "file-loader",
             },
             {
                 test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
-                use: 'url-loader? limit=10000&mimetype=application/font-woff'
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    mimetype: 'application/font-woff',
+                },
             },
             {
                 test: /\.ttf$/,
-                use: [
-                    {
-                        loader: 'ttf-loader',
-                        options: {
-                            name: './font/[hash].[ext]',
-                        },
-                    },
-                ]
+                loader: 'ttf-loader',
+                options: {
+                    name: './font/[hash].[ext]',
+                },
             },
             {
                 test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                use: 'file-loader'
+                loader: 'file-loader',
             },
             {
                 test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                use: 'url-loader?limit=10000&mimetype=image/svg+xml'
+                loader: 'url-loader',
+                options: {
+                    limit: 10000,
+                    mimetype: 'image/svg+xml',
+                },
             },
-        ]
+        ],
     },
     plugins: [
         new CopyWebpackPlugin([
