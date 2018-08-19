@@ -1,4 +1,4 @@
-const ProfileImg = require('../resources/DanIvy.jpg');
+import * as ProfileImg from '../resources/DanIvy.jpg';
 import * as styles from '../styles.css';
 import * as React from 'react';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
@@ -25,7 +25,7 @@ export default class Header extends React.Component<IHeaderProps> {
   renderItem = (item: string): JSX.Element => {
     return (
       <NavItem active={item === this.props.selectedTab} eventKey={item} key={item}>
-        {item} 
+        {item}
       </NavItem>
     )
   }
