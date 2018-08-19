@@ -78,8 +78,8 @@ module.exports = {
     plugins: [
         new CopyWebpackPlugin([
             {
-                from: 'src/resources',
-                to: 'resources',
+                from: 'static',
+                to: 'static',
             }
         ]),
         new HtmlWebpackPlugin({
