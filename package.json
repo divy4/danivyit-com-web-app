@@ -4,8 +4,8 @@
   "description": "A react app for danivyit.com.",
   "main": "index.js",
   "scripts": {
-    "build-dev": "./node_modules/.bin/webpack --mode development --watch --config webpack.config.js",
-    "build-prod": "./node_modules/.bin/webpack --mode production --config webpack.config.js",
+    "build-dev": "rm -rf dist/* && \"./node_modules/.bin/webpack\" --mode development --watch --config webpack.config.js",
+    "build-prod": "rm -rf dist/ && \"./node_modules/.bin/webpack\" --mode production --config webpack.config.js",
     "host": "cd dist/ && npx http-server && cd ..",
     "lint": "./node_modules/.bin/tslint --config tslint.json --project tsconfig.json 'src/**/*.tsx'",
     "test": "./node_modules/.bin/jest --config jest.config.js"
