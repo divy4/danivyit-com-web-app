@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
-import App from '../../components/App';
+import { App } from '../../components/App';
 
 enzyme.configure({ adapter: new Adapter() });
 

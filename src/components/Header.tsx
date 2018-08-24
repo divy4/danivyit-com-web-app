@@ -3,14 +3,14 @@ import * as styles from '../styles.css';
 import * as React from 'react';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
-interface IHeaderProps {
+export interface IHeaderProps {
   classname?: string;
   tabNames: string[];
   onSelect?: (s: string) => void;
   selectedTab: string;
 }
 
-export default class Header extends React.Component<IHeaderProps> {
+export class Header extends React.Component<IHeaderProps> {
   constructor(props: IHeaderProps) {
     super(props)
   }
