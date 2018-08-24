@@ -5,9 +5,9 @@ import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 export interface IHeaderProps {
   classname?: string;
-  tabNames: string[];
   onSelect?: (s: string) => void;
   selectedTab: string;
+  tabNames: string[];
 }
 
 export class Header extends React.Component<IHeaderProps> {
