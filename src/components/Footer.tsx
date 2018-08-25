@@ -9,7 +9,11 @@ export class Footer extends React.Component<IFooterProps> {
     return (
       <div className={styles.footer}>
         <h4>
-          This React app is written in typescript, packaged by webpack, and deployed with a Docker swarm of Raspberry Pis.
+          This <a href="https://reactjs.org/">React</a> app is written
+          in <a href="https://www.typescriptlang.org/">typescript</a>,
+          packaged by <a href="https://webpack.js.org/"></a>webpack,
+          and deployed with a <a href="https://www.docker.com/">Docker</a> swarm
+          of <a href="https://www.raspberrypi.org/">Raspberry Pi</a>s.
         </h4>
       </div>
     )
