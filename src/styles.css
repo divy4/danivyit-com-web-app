@@ -1,6 +1,9 @@
 .footer {
     background: black;
-    height: 100px;
+    color: white;
+    flex: 1;
+    padding: 25px 10% 25px 10%;
+    text-align: center;
     width: 100%;
 }
 
