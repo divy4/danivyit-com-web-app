@@ -8,7 +8,7 @@
     "build-prod": "rm -rf dist/ && \"./node_modules/.bin/webpack\" --mode production --config webpack.config.js",
     "host": "cd dist/ && npx http-server && cd ..",
     "lint": "./node_modules/.bin/tslint --config tslint.json --project tsconfig.json 'src/**/*.tsx'",
-    "test": "./node_modules/.bin/jest --config jest.config.js"
+    "test": "./node_modules/.bin/jest"
   },
   "repository": {
     "type": "git",
@@ -40,10 +40,14 @@
     "webpack-cli": "^3.1.0"
   },
   "dependencies": {
+    "@types/enzyme": "^3.1.13",
+    "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/react": "^16.4.9",
     "@types/react-bootstrap": "^0.32.11",
     "@types/react-dom": "^16.0.7",
     "bootstrap": "^3.3.7",
+    "enzyme": "^3.4.4",
+    "enzyme-adapter-react-16": "^1.2.0",
     "react": "^16.4.2",
     "react-bootstrap": "^0.32.1",
     "react-dom": "^16.4.2"

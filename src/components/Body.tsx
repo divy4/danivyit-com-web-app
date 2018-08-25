@@ -1,10 +1,10 @@
 import * as React from 'react';
 
-interface IBodyProps {
+export interface IBodyProps {
   tabName: string;
 }
 
-export default class Body extends React.Component<IBodyProps> {
+export class Body extends React.Component<IBodyProps> {
   render(): JSX.Element {
     return (
       <div>
