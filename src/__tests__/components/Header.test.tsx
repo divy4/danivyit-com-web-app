@@ -7,19 +7,16 @@ import { Header, IHeaderProps } from '../../components/Header';
 
 enzyme.configure({ adapter: new Adapter() });
 
+const mockProps: IHeaderProps = {
+  selectedTab: 'second',
+  tabNames: ['first', 'second', 'third'],
+}
+
 describe('<Header>', () => {
-  const mockProps: IHeaderProps = {
-    onSelect: (tab: string) => {
-      selectedTab = tab;
-    },
-    selectedTab: 'second',
-    tabNames: ['first', 'second', 'third'],
-  }
-  let selectedTab: string = 'second';
   let wrapper: any;
 
   beforeAll(() => {
-      wrapper = enzyme.shallow(<Header {...mockProps}/>);
+    wrapper = enzyme.shallow(<Header {...mockProps}/>);
   });
 
   test('renders an <img>', () => {
@@ -27,14 +24,14 @@ describe('<Header>', () => {
   });
 
   test('renders a <Navbar>', () => {
-      expect(wrapper.find(Navbar)).toHaveLength(1);
+    expect(wrapper.find(Navbar)).toHaveLength(1);
   });
 
   test('renders a <Nav>', () => {
-      expect(wrapper.find(Nav)).toHaveLength(1);
+    expect(wrapper.find(Nav)).toHaveLength(1);
   });
 
   test('renders three <NavItem>s', () => {
-      expect(wrapper.find(NavItem)).toHaveLength(3);
+    expect(wrapper.find(NavItem)).toHaveLength(3);
   });
 });
