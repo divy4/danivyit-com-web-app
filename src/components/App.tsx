@@ -1,10 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Body from './Body';
-import Footer from './Footer';
-import Header from './Header';
+import { Body } from './Body';
+import { Footer } from './Footer';
+import { Header } from './Header';
 import * as React from 'react';
 
-interface IAppProps {
+export interface IAppProps {
 }
 
 interface IAppState {
@@ -12,7 +12,7 @@ interface IAppState {
   tabs: string[];
 }
 
-export default class App extends React.Component<IAppProps, IAppState> {
+export class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props)
     this.state = {
