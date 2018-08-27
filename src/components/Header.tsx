@@ -32,7 +32,7 @@ export class Header extends React.Component<IHeaderProps> {
 
   render(): JSX.Element {
     return (
-      <div>
+      <div className={styles.header}>
         <div className={styles.profileImageContainer}>
           <img src={ProfileImg} className={styles.profileImage}/>
         </div>

@@ -1,3 +1,7 @@
+.body {
+    margin: -20px;
+}
+
 .body-text {
     padding: 20px;
 }
@@ -9,6 +13,10 @@
     padding: 25px 10% 25px 10%;
     text-align: center;
     width: 100%;
+}
+
+.header {
+    margin: -20px;
 }
 
 .profile-image {
