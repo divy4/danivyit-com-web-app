@@ -3,15 +3,19 @@ import * as enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
 import testImg from '../testImg.png';
-import { Banner, BannerTitle } from '../../components/Banner';
+import { Banner, BannerTitle, IBannerProps } from '../../components/Banner';
 
 enzyme.configure({ adapter: new Adapter() });
+
+const mockProps: IBannerProps = {
+  src: testImg
+}
 
 describe('<BannerTitle>', () => {
   let wrapper: any;
 
   beforeAll(() => {
-    wrapper = enzyme.shallow(<Banner src={testImg}><BannerTitle>Test</BannerTitle></Banner>);
+    wrapper = enzyme.shallow(<Banner {...mockProps}><BannerTitle>Test</BannerTitle></Banner>);
   });
 
   test('renders a <BannerTitle>', () => {
