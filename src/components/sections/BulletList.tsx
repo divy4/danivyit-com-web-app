@@ -3,6 +3,7 @@ import * as React from 'react';
 
 export interface IBulletListProps {
   className?: string;
+  columnWidth: string;
   title?: string;
 }
 
@@ -36,11 +37,11 @@ export class BulletList extends React.Component<IBulletListProps> {
   }
 
   render(): JSX.Element {
-    const { className, children, title } = this.props;
+    const { children, className, columnWidth, title } = this.props;
     return (
       <div className={className}>
         {this.renderTitle(title)}
-        <ul className={styles.bulletList}>
+        <ul className={styles.bulletList} style={{gridTemplateColumns: `repeat(auto-fit, ${columnWidth})`}}>
           {React.Children.map(children || null, this.renderChild)}
         </ul>
       </div>
