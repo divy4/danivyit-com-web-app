@@ -6,6 +6,7 @@ export const bulletList: string;
 export const bullet: string;
 export const footer: string;
 export const header: string;
+export const noMargin: string;
 export const profileImage: string;
 export const profileImageContainer: string;
 export const sectionTitle: string;
