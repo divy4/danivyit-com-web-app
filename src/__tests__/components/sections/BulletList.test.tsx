@@ -8,9 +8,11 @@ import { BulletList, IBulletListProps } from '../../../components/sections/Bulle
 enzyme.configure({ adapter: new Adapter() });
 
 const mockPropsNoTitle: IBulletListProps = {
+  columnWidth: "100px",
 }
 
 const mockPropsTitle: IBulletListProps = {
+  columnWidth: "100px",
   title: "Title"
 }
 
