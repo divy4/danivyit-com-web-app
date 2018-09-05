@@ -4,13 +4,13 @@ import * as React from 'react';
 
 export interface IBodySectionProps {
   bannerImg: any;
-  text: string;
+  children?: any;
   title: string;
 }
 
 export class BodySection extends React.Component<IBodySectionProps> {
   render(): JSX.Element {
-    const {bannerImg, text, title} = this.props;
+    const {bannerImg, children, title} = this.props;
     return (
       <div>
         <Banner src={bannerImg}>
@@ -19,9 +19,7 @@ export class BodySection extends React.Component<IBodySectionProps> {
           </BannerTitle>
         </Banner>
         <div>
-          <h4 className={styles.bodyText}>
-            {text}
-          </h4>
+          {children}
         </div>
       </div>
     )
