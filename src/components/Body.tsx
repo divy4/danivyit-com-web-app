@@ -1,5 +1,5 @@
 import { IContentTab, IContentSection, IContentSubSection } from '../content';
-import styles from '../styles.css';
+import * as styles from '../styles.css';
 import * as React from 'react';
 import { Banner, BannerTitle } from './Banner';
 import { BulletList } from './sections/BulletList';
