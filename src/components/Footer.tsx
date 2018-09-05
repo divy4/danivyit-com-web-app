@@ -15,6 +15,9 @@ export class Footer extends React.Component<IFooterProps> {
           and deployed with a <a href="https://www.docker.com/">Docker</a> swarm
           of <a href="https://www.raspberrypi.org/">Raspberry Pi</a>s.
         </h4>
+        <h4>
+          All images of this website were taken by me, with the exceptions of all school and language logos, which belong to their respective associations.
+        </h4>
       </div>
     )
   }
