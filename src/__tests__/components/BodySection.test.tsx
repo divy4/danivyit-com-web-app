@@ -9,8 +9,8 @@ enzyme.configure({ adapter: new Adapter() });
 
 const mockProps: IBodySectionProps = {
   bannerImg: testImg,
-  text: "text",
-  title: "title"
+  children: <h4>Text</h4>,
+  title: "title",
 }
 
 describe('<BodySection>', () => {
@@ -24,7 +24,7 @@ describe('<BodySection>', () => {
     expect(wrapper.find('Banner')).toHaveLength(1);
   });
 
-  test('renders a <h4>', () => {
+  test('renders children', () => {
     expect(wrapper.find('h4')).toHaveLength(1);
   });
 });

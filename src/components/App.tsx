@@ -1,5 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Body } from './Body';
+import { content } from '../content';
 import { Footer } from './Footer';
 import { Header } from './Header';
 import * as React from 'react';
@@ -33,7 +34,7 @@ export class App extends React.Component<IAppProps, IAppState> {
     return (
       <div>
         <Header tabNames={tabs} onSelect={this.handleTabChange} selectedTab={currentTab}/>
-        <Body tabName={currentTab}/>
+        <Body tabContent={content.tabs[currentTab]}/>
         <Footer/>
       </div>
     )

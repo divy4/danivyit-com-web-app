@@ -9,5 +9,7 @@ export const header: string;
 export const noMargin: string;
 export const profileImage: string;
 export const profileImageContainer: string;
+export const section: string;
 export const sectionTitle: string;
+export const subsectionContainer: string;
 export const textSection: string;
