@@ -17,8 +17,8 @@ export class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props)
     this.state = {
-      currentTab: "Home",
-      tabs: ["Home", "About", "Experience", "School", "Work", "Contact"],
+      currentTab: "About",
+      tabs: ["About", "Experience", "School", "Work", "Contact"],
     }
   }
 
