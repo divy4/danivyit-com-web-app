@@ -6,6 +6,8 @@ export interface IContentSubSection {
   type: any;
   children?: any;
   columnWidth?: string;
+  flex: number;
+  minWidth: string;
 }
 
 export interface IContentSection {
@@ -37,6 +39,38 @@ export const content: IContent = {
             {
               type: TextSection,
               children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
+            },
+          ],
+        },
+        {
+          banner: defaultImg,
+          bannerTitle: "Home 2",
+          subSections: [
+            {
+              type: TextSection,
+              children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
+            },
+            {
+              type: BulletList,
+              children: [
+                "Bullet 1",
+                "Bullet 2",
+                "Bullet 3",
+                "Bullet 4",
+                "Bullet 5",
+                "Bullet 6",
+                "Bullet 7",
+                "Bullet 8",
+                "Bullet 9",
+                "Bullet 10",
+              ],
+              columnWidth: "100px",
+              flex: 1,
+              minWidth: "300px",
             },
           ],
         },
@@ -51,6 +85,8 @@ export const content: IContent = {
             {
               type: TextSection,
               children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
             },
           ],
         },
@@ -65,6 +101,8 @@ export const content: IContent = {
             {
               type: TextSection,
               children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
             },
           ],
         },
@@ -79,6 +117,8 @@ export const content: IContent = {
             {
               type: TextSection,
               children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
             },
           ],
         },
@@ -93,6 +133,8 @@ export const content: IContent = {
             {
               type: TextSection,
               children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
             },
           ],
         },
@@ -107,6 +149,8 @@ export const content: IContent = {
             {
               type: TextSection,
               children: "Hello!",
+              flex: 1,
+              minWidth: "300px",
             },
           ],
         },

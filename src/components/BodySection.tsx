@@ -5,20 +5,21 @@ import * as React from 'react';
 export interface IBodySectionProps {
   bannerImg: any;
   children?: any;
+  className?: string;
   title: string;
 }
 
 export class BodySection extends React.Component<IBodySectionProps> {
   render(): JSX.Element {
-    const {bannerImg, children, title} = this.props;
+    const {bannerImg, children, className, title} = this.props;
     return (
-      <div>
+      <div className={className}>
         <Banner src={bannerImg}>
           <BannerTitle>
             {title}
           </BannerTitle>
         </Banner>
-        <div>
+        <div className={styles.subsectionContainer}>
           {children}
         </div>
       </div>
