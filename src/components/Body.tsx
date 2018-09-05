@@ -1,4 +1,5 @@
 import { IContentTab, IContentSection, IContentSubSection } from '../content';
+import styles from '../styles.css';
 import * as React from 'react';
 import { Banner, BannerTitle } from './Banner';
 import { BulletList } from './sections/BulletList';
@@ -28,7 +29,7 @@ export class Body extends React.Component<IBodyProps> {
       throw `Invalid subsection type: ${subsection.type}`;
     }
     return (
-      <div key={index}>
+      <div key={index} style={{flex: subsection.flex, minWidth: subsection.minWidth}}>
         {element}
       </div>
     );
@@ -36,11 +37,9 @@ export class Body extends React.Component<IBodyProps> {
 
   renderSection = (section: IContentSection, index: number): JSX.Element => {
     return (
-      <div key={index}>
-        <BodySection bannerImg={section.banner} title={section.bannerTitle}>
-          {section.subSections.map(this.renderSubsection)}
-        </BodySection>
-      </div>
+      <BodySection className={styles.section} bannerImg={section.banner} key={index} title={section.bannerTitle}>
+        {section.subSections.map(this.renderSubsection)}
+      </BodySection>
     );
   }
 
