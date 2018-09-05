@@ -8,7 +8,6 @@ import { BodySection } from '../../components/BodySection';
 import { BulletList } from '../../components/sections/BulletList';
 import { TextSection } from '../../components/sections/TextSection';
 
-
 enzyme.configure({ adapter: new Adapter() });
 
 const mockProps: IBodyProps = {
@@ -21,6 +20,8 @@ const mockProps: IBodyProps = {
           {
             type: TextSection,
             children: "Subsection text",
+            flex: 1,
+            minWidth: "300px",
           },
         ],
       },
@@ -34,6 +35,8 @@ const mockProps: IBodyProps = {
               "Bullet 1",
               "Bullet 2",
             ],
+            flex: 1,
+            minWidth: "300px",
           },
         ],
       },
