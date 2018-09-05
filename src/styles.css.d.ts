@@ -10,3 +10,4 @@ export const noMargin: string;
 export const profileImage: string;
 export const profileImageContainer: string;
 export const sectionTitle: string;
+export const textSection: string;
