@@ -15,13 +15,13 @@ export class Body extends React.Component<IBodyProps> {
     let element: JSX.Element = null;
     if (subsection.type == BulletList) {
       element = (
-        <BulletList columnWidth={subsection.columnWidth}>
+        <BulletList columnWidth={subsection.columnWidth} title={subsection.title}>
           {subsection.children}
         </BulletList>
       );
     } else if (subsection.type == TextSection) {
       element = (
-        <TextSection>
+        <TextSection title={subsection.title}>
           {subsection.children}
         </TextSection>
       );
