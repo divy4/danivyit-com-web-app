@@ -25,10 +25,18 @@ export interface IContentTabList {
 }
 
 export interface IContent {
-  [key: string]: IContentTabList;
+  tabs: IContentTabList;
+  tabNames: string[];
 }
 
 export const content: IContent = {
+  tabNames: [
+    "About",
+    "Experience",
+    "School",
+    "Work",
+    "Contact"
+  ],
   tabs: {
     Home: {
       sections: [
