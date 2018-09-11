@@ -10,15 +10,13 @@ export interface IAppProps {
 
 interface IAppState {
   currentTab: string;
-  tabs: string[];
 }
 
 export class App extends React.Component<IAppProps, IAppState> {
   constructor(props: IAppProps) {
     super(props)
     this.state = {
-      currentTab: "Home",
-      tabs: ["Home", "About", "Experience", "School", "Work", "Contact"],
+      currentTab: content.tabNames[0],
     }
   }
 
@@ -30,11 +28,10 @@ export class App extends React.Component<IAppProps, IAppState> {
   }
 
   render() {
-    const { currentTab, tabs } = this.state;
     return (
       <div>
-        <Header tabNames={tabs} onSelect={this.handleTabChange} selectedTab={currentTab}/>
-        <Body tabContent={content.tabs[currentTab]}/>
+        <Header tabNames={content.tabNames} onSelect={this.handleTabChange} selectedTab={this.state.currentTab}/>
+        <Body tabContent={content.tabs[this.state.currentTab]}/>
         <Footer/>
       </div>
     )
