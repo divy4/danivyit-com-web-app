@@ -16,8 +16,8 @@ describe('<Footer>', () => {
     wrapper = enzyme.shallow(<Footer {...mockProps}/>);
   });
 
-  test('contains a paragraph', () => {
-    expect(wrapper.find('h4')).toHaveLength(1);
+  test('contains 2 paragraphs', () => {
+    expect(wrapper.find('h4')).toHaveLength(2);
   });
 
   test('contains 5 links', () => {
