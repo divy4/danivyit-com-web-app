@@ -10,7 +10,7 @@ import MallocImg from './resources/Malloc.png';
 import MandelbrotImg from './resources/Mandelbrot.png';
 import ParklandImg from './resources/Parkland.png';
 import PerformanceImg from './resources/Performance.png';
-import RedAndBlueImg from './resources/RedAndBlue.png';
+import RedAndBlueImg from './resources/RedAndBlue.jpg';
 import SystemAdminImg from './resources/SystemAdmin.png';
 import ThesisImg from './resources/Thesis.png';
 import UIUCImg from './resources/UIUC.png';
