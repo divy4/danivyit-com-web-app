@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
-import testImg from '../testImg.png';
+import testImgPng from '../testImg.png';
 import { Body, IBodyProps } from '../../components/Body';
 import { BodySection } from '../../components/BodySection';
 import { BulletList } from '../../components/sections/BulletList';
@@ -14,29 +14,29 @@ const mockProps: IBodyProps = {
   tabContent: {
     sections: [
       {
-        banner: testImg,
-        bannerTitle: "Section 1",
+        banner: testImgPng,
+        bannerTitle: 'Section 1',
         subSections: [
           {
             type: TextSection,
-            children: "Subsection text",
+            children: 'Subsection text',
             flex: 1,
-            minWidth: "300px",
+            minWidth: '300px',
           },
         ],
       },
       {
-        banner: testImg,
-        bannerTitle: "Section 2",
+        banner: testImgPng,
+        bannerTitle: 'Section 2',
         subSections: [
           {
             type: BulletList,
             children: [
-              "Bullet 1",
-              "Bullet 2",
+              'Bullet 1',
+              'Bullet 2',
             ],
             flex: 1,
-            minWidth: "300px",
+            minWidth: '300px',
           },
         ],
       },

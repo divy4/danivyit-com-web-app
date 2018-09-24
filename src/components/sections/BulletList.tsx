@@ -25,15 +25,14 @@ export class BulletList extends React.Component<IBulletListProps> {
   }
 
   renderTitle(title: string) {
-    if (title == undefined) {
+    if (title === undefined) {
       return;
-    } else {
-      return (
-        <h3 className={styles.sectionTitle}>
-          {title}
-        </h3>
-      );
     }
+    return (
+      <h3 className={styles.sectionTitle}>
+        {title}
+      </h3>
+    );
   }
 
   render(): JSX.Element {
@@ -41,7 +40,9 @@ export class BulletList extends React.Component<IBulletListProps> {
     return (
       <div className={className}>
         {this.renderTitle(title)}
-        <ul className={styles.bulletList} style={{gridTemplateColumns: `repeat(auto-fit, ${columnWidth})`}}>
+        <ul
+          className={styles.bulletList}
+          style={{ gridTemplateColumns: `repeat(auto-fit, ${columnWidth})` }}>
           {React.Children.map(children || null, this.renderChild)}
         </ul>
       </div>
