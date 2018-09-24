@@ -12,13 +12,13 @@ export interface IHeaderProps {
 
 export class Header extends React.Component<IHeaderProps> {
   constructor(props: IHeaderProps) {
-    super(props)
+    super(props);
   }
 
   handleSelection = (event: React.SyntheticEvent<Navbar>): void => {
-    const {onSelect} = this.props;
-    if (onSelect != undefined) {
-      onSelect(event.toString())
+    const { onSelect } = this.props;
+    if (onSelect !== undefined) {
+      onSelect(event.toString());
     }
   }
 
@@ -27,7 +27,7 @@ export class Header extends React.Component<IHeaderProps> {
       <NavItem active={item === this.props.selectedTab} eventKey={item} key={item}>
         {item}
       </NavItem>
-    )
+    );
   }
 
   render(): JSX.Element {
@@ -36,7 +36,10 @@ export class Header extends React.Component<IHeaderProps> {
         <div className={styles.profileImageContainer}>
           <img src={ProfileImg} className={styles.profileImage}/>
         </div>
-        <Navbar className={this.props.classname} onSelect={this.handleSelection} collapseOnSelect fluid inverse staticTop>
+        <Navbar
+          className={this.props.classname}
+          onSelect={this.handleSelection}
+          collapseOnSelect fluid inverse staticTop>
           <Navbar.Header>
             <Navbar.Toggle/>
           </Navbar.Header>
@@ -47,6 +50,6 @@ export class Header extends React.Component<IHeaderProps> {
           </Navbar.Collapse>
         </Navbar>
       </div>
-    )
+    );
   }
 }

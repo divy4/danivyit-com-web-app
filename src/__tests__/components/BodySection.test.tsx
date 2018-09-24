@@ -2,16 +2,16 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
-import testImg from '../testImg.png';
+import testImgPng from '../testImg.png';
 import { BodySection, IBodySectionProps } from '../../components/BodySection';
 
 enzyme.configure({ adapter: new Adapter() });
 
 const mockProps: IBodySectionProps = {
-  bannerImg: testImg,
+  bannerImg: testImgPng,
   children: <h4>Text</h4>,
-  title: "title",
-}
+  title: 'title',
+};
 
 describe('<BodySection>', () => {
   let wrapper: any;
