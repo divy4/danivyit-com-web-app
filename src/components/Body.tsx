@@ -13,13 +13,13 @@ export interface IBodyProps {
 export class Body extends React.Component<IBodyProps> {
   renderSubsection = (subsection: IContentSubSection, index: number): JSX.Element => {
     let element: JSX.Element = null;
-    if (subsection.type == BulletList) {
+    if (subsection.type === BulletList) {
       element = (
         <BulletList columnWidth={subsection.columnWidth} title={subsection.title}>
           {subsection.children}
         </BulletList>
       );
-    } else if (subsection.type == TextSection) {
+    } else if (subsection.type === TextSection) {
       element = (
         <TextSection title={subsection.title}>
           {subsection.children}
@@ -29,7 +29,7 @@ export class Body extends React.Component<IBodyProps> {
       throw `Invalid subsection type: ${subsection.type}`;
     }
     return (
-      <div key={index} style={{flex: subsection.flex, minWidth: subsection.minWidth}}>
+      <div key={index} style={{ flex: subsection.flex, minWidth: subsection.minWidth }}>
         {element}
       </div>
     );
@@ -37,7 +37,10 @@ export class Body extends React.Component<IBodyProps> {
 
   renderSection = (section: IContentSection, index: number): JSX.Element => {
     return (
-      <BodySection className={styles.section} bannerImg={section.banner} key={index} title={section.bannerTitle}>
+      <BodySection
+          className={styles.section}
+          bannerImg={section.banner}
+          key={index} title={section.bannerTitle}>
         {section.subSections.map(this.renderSubsection)}
       </BodySection>
     );
