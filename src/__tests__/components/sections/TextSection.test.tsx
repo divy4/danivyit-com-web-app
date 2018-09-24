@@ -7,13 +7,16 @@ import { ITextSectionProps, TextSection } from '../../../components/sections/Tex
 enzyme.configure({ adapter: new Adapter() });
 
 const mockPropsNoTitle: ITextSectionProps = {
-}
+};
 
 const mockPropsTitle: ITextSectionProps = {
-  title: "Title"
-}
+  title: 'Title',
+};
 
-const text: string = "Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text.";
+const text: string = `Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text
+Text Text Text Text Text Text Text Text Text.`;
 
 describe('<BannerTitle>', () => {
   let wrapperWithTitle: any;
@@ -24,10 +27,10 @@ describe('<BannerTitle>', () => {
     wrapperWithTitle = enzyme.shallow(<TextSection {...mockPropsTitle}>{text}</TextSection>);
   });
 
-  test("doesn't contain when title is undefined", () => {
+  test('doesn\'t contain when title is undefined', () => {
     expect(wrapperWithoutTitle.find('h3')).toHaveLength(0);
   });
-  
+
   test('contains a title when title is defined', () => {
     expect(wrapperWithTitle.find('h3')).toHaveLength(1);
   });
