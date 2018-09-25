@@ -11,7 +11,7 @@ export interface IBodySectionProps {
 
 export class BodySection extends React.Component<IBodySectionProps> {
   render(): JSX.Element {
-    const {bannerImg, children, className, title} = this.props;
+    const { bannerImg, children, className, title } = this.props;
     return (
       <div className={className}>
         <Banner src={bannerImg}>
@@ -23,6 +23,6 @@ export class BodySection extends React.Component<IBodySectionProps> {
           {children}
         </div>
       </div>
-    )
+    );
   }
 }

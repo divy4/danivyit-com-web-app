@@ -7,7 +7,7 @@ import { Footer, IFooterProps } from '../../components/Footer';
 enzyme.configure({ adapter: new Adapter() });
 
 const mockProps: IFooterProps = {
-}
+};
 
 describe('<Footer>', () => {
   let wrapper: any;
