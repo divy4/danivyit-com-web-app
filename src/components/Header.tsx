@@ -25,7 +25,9 @@ export class Header extends React.Component<IHeaderProps> {
   renderItem = (item: string): JSX.Element => {
     return (
       <NavItem active={item === this.props.selectedTab} eventKey={item} key={item}>
-        {item}
+        <h4>
+          {item}
+        </h4>
       </NavItem>
     );
   }
