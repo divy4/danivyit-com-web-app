@@ -6,6 +6,7 @@ import { Header } from './Header';
 import * as React from 'react';
 
 export interface IAppProps {
+  className?: string;
 }
 
 interface IAppState {
@@ -29,7 +30,7 @@ export class App extends React.Component<IAppProps, IAppState> {
 
   render() {
     return (
-      <div>
+      <div className={this.props.className}>
         <Header
           tabNames={content.tabNames}
           onSelect={this.handleTabChange}

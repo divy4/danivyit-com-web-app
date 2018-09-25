@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Nav, Navbar, NavItem } from 'react-bootstrap';
 
 export interface IHeaderProps {
-  classname?: string;
+  className?: string;
   onSelect?: (s: string) => void;
   selectedTab: string;
   tabNames: string[];
@@ -39,7 +39,7 @@ export class Header extends React.Component<IHeaderProps> {
           <img src={ProfileImg} className={styles.profileImage}/>
         </div>
         <Navbar
-          className={this.props.classname}
+          className={this.props.className}
           onSelect={this.handleSelection}
           collapseOnSelect fluid inverse staticTop>
           <Navbar.Header>
