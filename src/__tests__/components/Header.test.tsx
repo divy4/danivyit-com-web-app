@@ -10,7 +10,7 @@ enzyme.configure({ adapter: new Adapter() });
 const mockProps: IHeaderProps = {
   selectedTab: 'second',
   tabNames: ['first', 'second', 'third'],
-}
+};
 
 describe('<Header>', () => {
   let wrapper: any;
