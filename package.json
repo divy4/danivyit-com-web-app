@@ -7,6 +7,7 @@
     "build-dev": "rm -rf dist/* && \"./node_modules/.bin/webpack\" --mode development --watch --config webpack.config.js",
     "build-prod": "rm -rf dist/ && \"./node_modules/.bin/webpack\" --mode production --config webpack.config.js",
     "host": "cd dist/ && npx http-server && cd ..",
+    "host-local": "cd dist/ && npx http-server -a localhost -a 127.0.0.1 && cd ..",
     "lint": "./node_modules/.bin/tslint --config tslint.json --project tsconfig.json src/**/*.tsx",
     "test": "./node_modules/.bin/jest"
   },
