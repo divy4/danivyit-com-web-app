@@ -7,6 +7,7 @@ import { TextSection } from './sections/TextSection';
 import { BodySection } from './BodySection';
 
 export interface IBodyProps {
+  className?: string;
   tabContent: IContentTab;
 }
 
@@ -47,9 +48,10 @@ export class Body extends React.Component<IBodyProps> {
   }
 
   render(): JSX.Element {
+    const { className, tabContent } = this.props;
     return (
-      <div>
-        {this.props.tabContent.sections.map(this.renderSection)}
+      <div className={className}>
+        {tabContent.sections.map(this.renderSection)}
       </div>
     );
   }
