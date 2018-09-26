@@ -1,13 +1,15 @@
+import classnames from 'classnames';
 import * as styles from '../styles.css';
 import * as React from 'react';
 
 export interface IFooterProps {
+  className?: string;
 }
 
 export class Footer extends React.Component<IFooterProps> {
   render(): JSX.Element {
     return (
-      <div className={styles.footer}>
+      <div className={classnames(styles.footer, this.props.className)}>
         <h4>
           This <a href="https://reactjs.org/">React</a> app is written
           in <a href="https://www.typescriptlang.org/">TypeScript</a>,
