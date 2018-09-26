@@ -8,15 +8,14 @@ export interface ITextSectionProps {
 
 export class TextSection extends React.Component<ITextSectionProps> {
   renderTitle(title: string) {
-    if (title == undefined) {
+    if (title === undefined) {
       return;
-    } else {
-      return (
-        <h3 className={styles.sectionTitle}>
-          {title}
-        </h3>
-      );
     }
+    return (
+      <h3 className={styles.sectionTitle}>
+        {title}
+      </h3>
+    );
   }
 
   render(): JSX.Element {
