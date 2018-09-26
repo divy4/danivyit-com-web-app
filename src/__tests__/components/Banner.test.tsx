@@ -2,14 +2,14 @@ import * as React from 'react';
 import * as enzyme from 'enzyme';
 import * as Adapter from 'enzyme-adapter-react-16';
 
-import testImg from '../testImg.png';
+import testImgPng from '../testImg.png';
 import { Banner, BannerTitle, IBannerProps } from '../../components/Banner';
 
 enzyme.configure({ adapter: new Adapter() });
 
 const mockProps: IBannerProps = {
-  src: testImg
-}
+  src: testImgPng,
+};
 
 describe('<BannerTitle>', () => {
   let wrapper: any;
